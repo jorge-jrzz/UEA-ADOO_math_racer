@@ -7,6 +7,8 @@ public class chhester : MonoBehaviour
     private float movimientoFuerza = 12f;
 
     private Rigidbody2D miCuerpoRigido;
+    private bool seMovioDerecha = false;
+    private bool seMovioIzquierda = false;    
     // Start is called before the first frame update
     void Start()
     {
@@ -20,8 +22,20 @@ public class chhester : MonoBehaviour
         float movementX = Input.GetAxisRaw("Horizontal"); //esta variable puede ser -1, 0 o 1
         Vector2 posicionJug = transform.position;
 
-        posicionJug = posicionJug + new Vector2(movementX, 0f) * movimientoFuerza * Time.deltaTime;
-
+        if (movementX > 0 && !seMovioDerecha)
+        {
+            // Mover a la derecha
+            posicionJug.x += movimientoFuerza * Time.deltaTime*250;
+            seMovioDerecha = true;
+            seMovioIzquierda = false;
+        }
+        else if (movementX < 0 && !seMovioIzquierda)
+        {
+            // Mover a la izquierda
+            posicionJug.x -= movimientoFuerza * Time.deltaTime*250;
+            seMovioIzquierda = true;
+            seMovioDerecha = false;
+        }
         transform.position = posicionJug;
     }
 }
