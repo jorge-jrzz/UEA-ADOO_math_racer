@@ -1,7 +1,5 @@
 # This .gitignore file should be placed at the root of your Unity project directory
 #
-# Get latest from https://github.com/github/gitignore/blob/main/Unity.gitignore
-#
 /[Ll]ibrary/
 /[Tt]emp/
 /[Oo]bj/
@@ -87,4 +85,4 @@ Thumbs.db
 /*.userosscache
 /*.sln.docstates
 
-src/MathRacer-new/Library/PackageCache/
+MathRacer-src/Library/
