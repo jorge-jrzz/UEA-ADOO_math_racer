@@ -7,8 +7,7 @@ TagManager:
   - FallingObject
   - RespuestaObject
   - RespuestaObject2
-  - RespuestaIncorrecta
-  - RespuestaCorrecta
+  - Answer
   layers:
   - Default
   - TransparentFX
