@@ -458,7 +458,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 3
+  m_GravityScale: 20
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -564,7 +564,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b64f85f20a20bcc4d96ffe3a6129387b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidad: 200
+  velocidad: 1500
 --- !u!1 &246935106
 GameObject:
   m_ObjectHideFlags: 0
@@ -3090,7 +3090,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: c493c2eca2e1fe342a860d22d61f225c, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 5be68135a25efaa4189b398dec235ca5, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -3312,7 +3312,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1346930132}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 143ac188723c8df4e8a99f96516d10ae, type: 3}
+  m_Script: {fileID: 11500000, guid: f8b513ee76f804d4cac897df51339654, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1357359796
@@ -3466,7 +3466,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 3
+  m_GravityScale: 20
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -4573,7 +4573,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1667712697}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b865e5b251a12ae4a9195cb2365d4170, type: 3}
+  m_Script: {fileID: 11500000, guid: d91adea3c4f62354fa9bcf2f46b0afb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   questionText: {fileID: 1521604617}

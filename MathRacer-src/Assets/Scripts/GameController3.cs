@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class GameController2 : MonoBehaviour
+public class GameController3 : MonoBehaviour
 {
     public TMP_Text questionText;
     public TextMeshProUGUI answerText1, answerText2;
@@ -28,23 +28,23 @@ public class GameController2 : MonoBehaviour
     private int scorePenaltyCount = 0;
 
     void Start()
-{
-    initialAnswer1Position = answerText1.transform.position;
-    initialAnswer2Position = answerText2.transform.position;
+    {
+        initialAnswer1Position = answerText1.transform.position;
+        initialAnswer2Position = answerText2.transform.position;
 
-    questionText.gameObject.SetActive(false);
-    answerText1.gameObject.SetActive(false);
-    answerText2.gameObject.SetActive(false);
-    victoryPanel.SetActive(false);
-    lossPanel.SetActive(false);
+        questionText.gameObject.SetActive(false);
+        answerText1.gameObject.SetActive(false);
+        answerText2.gameObject.SetActive(false);
+        victoryPanel.SetActive(false);
+        lossPanel.SetActive(false);
 
-    // Establece el tiempo a 1 al comienzo del juego
-    Time.timeScale = 1f;
+        Time.timeScale = 1f;
 
-    GenerateQuestion();
+        GenerateQuestion();
 
-    CalculateCanvasBounds();
-}
+        CalculateCanvasBounds();
+    }
+
     void Update()
     {
         if (gameInProgress)
@@ -65,61 +65,67 @@ public class GameController2 : MonoBehaviour
         }
     }
 
-    void GenerateQuestion()
+void GenerateQuestion()
+{
+    if (gameInProgress && questionCount < 10)
     {
-        if (gameInProgress && questionCount < 10)
+        questionText.gameObject.SetActive(true);
+        questionText.text = "";
+
+        ResetAnswerPositions();
+
+        int coefficient = Random.Range(1, 6); // Genera un coeficiente aleatorio entre 1 y 5
+        int constant = Random.Range(1, 21);  // Genera una constante aleatoria entre 1 y 20
+
+        int result = coefficient * constant; // Calcula el resultado de la ecuación
+
+        // Construye la ecuación
+        string newQuestion = coefficient + "X = " + result + ": X = ?";
+        correctAnswer = constant; // La respuesta correcta es la constante
+
+        int incorrectValue = Random.Range(1, 21); // Genera un valor incorrecto entre 1 y 20
+
+        while (incorrectValue == constant) // Asegúrate de que la respuesta incorrecta sea diferente de la respuesta correcta
         {
-            questionText.gameObject.SetActive(true);
-            questionText.text = "";
-
-            ResetAnswerPositions();
-
-            string newQuestion;
-            do
-            {
-                int num1 = Random.Range(1, 61) * 5; // Numerador es un múltiplo de 5 entre 5 y 300
-                int num2 = 5; // Denominador siempre 5
-
-                correctAnswer = num1 / num2;
-                int answerOffset = Random.Range(1, 10);
-                incorrectAnswer = (num1 / num2) + answerOffset;
-
-                newQuestion = "¿" + num1 + " / " + num2 + "?";
-            }
-            while (usedQuestions.Contains(newQuestion));
-
-            usedQuestions.Add(newQuestion);
-            questionText.text = newQuestion;
-
-            if (Random.Range(0, 2) == 0)
-            {
-                answerText1.text = correctAnswer.ToString();
-                answerText2.text = incorrectAnswer.ToString();
-            }
-            else
-            {
-                answerText2.text = correctAnswer.ToString();
-                answerText1.text = incorrectAnswer.ToString();
-            }
-
-            answerText1.gameObject.SetActive(true);
-            answerText2.gameObject.SetActive(true);
-
-            questionCount++;
+            incorrectValue = Random.Range(1, 21);
         }
-        else if (gameInProgress)
-        {
-            gameInProgress = false;
-            questionText.gameObject.SetActive(false);
-            answerText1.gameObject.SetActive(false);
-            answerText2.gameObject.SetActive(false);
 
-            if (questionCount == 10)
-            {
-                ShowVictoryPanel();
-            }
+        incorrectAnswer = incorrectValue; // La respuesta incorrecta es un valor diferente de la constante
+
+        newQuestion = "¿" + newQuestion;
+
+        usedQuestions.Add(newQuestion);
+        questionText.text = newQuestion;
+
+        if (Random.Range(0, 2) == 0)
+        {
+            answerText1.text = correctAnswer.ToString();
+            answerText2.text = incorrectAnswer.ToString();
+        }
+        else
+        {
+            answerText2.text = correctAnswer.ToString();
+            answerText1.text = incorrectAnswer.ToString();
+        }
+
+        answerText1.gameObject.SetActive(true);
+        answerText2.gameObject.SetActive(true);
+
+        questionCount++;
+    }
+    else if (gameInProgress)
+    {
+        gameInProgress = false;
+        questionText.gameObject.SetActive(false);
+        answerText1.gameObject.SetActive(false);
+        answerText2.gameObject.SetActive(false);
+
+        if (questionCount == 10) // Si se completan las 10 preguntas, muestra el panel de victoria
+        {
+            ShowVictoryPanel();
         }
     }
+}
 
     public void Answer(int answer)
     {
@@ -136,7 +142,7 @@ public class GameController2 : MonoBehaviour
 
         UpdateScoreText();
 
-        questionText.gameObject.SetActive (false);
+        questionText.gameObject.SetActive(false);
         answerText1.gameObject.SetActive(false);
         answerText2.gameObject.SetActive(false);
 
