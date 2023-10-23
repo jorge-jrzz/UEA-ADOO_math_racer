@@ -88,3 +88,4 @@ _ReSharper*/
 *.DotSettings.user
 
 MathRacer-src/Library/
+MathRacer-src/Temp/
