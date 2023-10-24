@@ -1,5 +1,18 @@
 # MATH RACER
-### Gama de colores
-* Colores para la interfaz en general: [colores](https://coolors.co/4d3887-2d185f-ffe34a-ff9c37)
-* Gama de colores para la partida (el juego en sí): [colores](https://coolors.co/000000-ffffff-f981af-ffe34a)
-* Gama de colores para las preguntas ya las posibles respuestas: [colores](https://coolors.co/00a676-ddd92a-5bc0eb)
+
+A video game to challenge your mental calculations made with Unity.
+
+![screenshot dificults](images/screenshot_dificults.png)
+![screenshot game 1](images/screenshot_game1.png)
+![screenshot game 2](images/screenshot_game2.png)
+
+## Autors
+
+- [Jorge Juarez](https://github.com/jorge-jrzz)
+- [Eduardo Gonzales](https://github.com/EduardoGog)
+- [Miguel Rosario](https://github.com/Miguel-Rosario)
+- [Yoshua Valdez](https://github.com/VALDEZYJ)
+
+## Licence
+
+[The Unlicense](https://unlicense.org)
