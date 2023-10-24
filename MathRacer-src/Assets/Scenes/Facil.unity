@@ -3096,8 +3096,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocidad: 2000
-  limiteIzquierdo: 300
-  limiteDerecho: 1600
+  limiteIzquierdo: 600
+  limiteDerecho: 2300
 --- !u!61 &1346930135
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3745,8 +3745,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 513, y: 169}
-  m_SizeDelta: {x: 389.3181, y: 50}
+  m_AnchoredPosition: {x: 463.52747, y: 175}
+  m_SizeDelta: {x: 490, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1521604617
 MonoBehaviour:
@@ -3778,7 +3778,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -3802,8 +3802,8 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
