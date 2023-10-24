@@ -3096,7 +3096,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocidad: 2000
-  limiteIzquierdo: 600
+  limiteIzquierdo: 700
   limiteDerecho: 2300
 --- !u!61 &1346930135
 BoxCollider2D:
