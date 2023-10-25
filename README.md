@@ -32,12 +32,14 @@ Have fun playing and improve your math skills with Chester!
 ![screenshot game 1](images/screenshot_game1.png)
 ![screenshot game 2](images/screenshot_game2.png)
 
+#### Note
+
+In the MacOS version there may be errors in the game regarding the verification of incorrect answers.
+
 ## Autors
 
 - [Jorge Juarez](https://github.com/jorge-jrzz)
 - [Eduardo Gonzales](https://github.com/EduardoGog)
-- [Miguel Rosario](https://github.com/Miguel-Rosario)
-- [Yoshua Valdez](https://github.com/VALDEZYJ)
 
 ## Licence
 
