@@ -13,7 +13,7 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: OncaBlack
-  productName: MathRacer
+  productName: Math Racer
   defaultCursor: {fileID: 2800000, guid: 84cb1eeb56e0443cda26074ec492f45b, type: 3}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.3019608, g: 0.21960784, b: 0.5294118, a: 1}
